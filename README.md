@@ -11,9 +11,9 @@ After the VPC specifications were establishes, I had to create the VPC security 
 
 
 # EC2
-The next key part of the infrastructure was the computing power. I began by launching an EC2 instance labeled, _University Lab Instance 1_. I chose the **Ubuntu Amazon Machine Image** and chose the default **t2.micro** instance type and key pair. The university is small, so the free default options are suitable for the scenario. 
+The next key part of the infrastructure was the computing power. I began by launching an EC2 instance labeled, _University Lab Instance 1_ into availability zone us-east-1a. I chose the **Ubuntu Amazon Machine Image** and chose the default **t2.micro** instance type and key pair. The university is small, so the free default options are suitable for the scenario. 
 
-**EC2 Settings:**
+**Other EC2 Settings:**
 + Networking Settings
     + Enabled Auto-assign public IP
     + Selected _Web Security Group_ for the EC2 security group
@@ -64,7 +64,19 @@ For the other options when making the EC2 Instance, I kept default. Once the ins
 Even though the university is small, I still want to make sure the website will be accessible in any chance of high volumes of incoming traffic. To do so, I created an application load balancer that will split traffic between instances in two different availability zones.
 
 **The steps I took to complete this:**
-1. Choose the **Launch more like this** action on the first instance created. 
-2. Renamed the copy to _University Lab Instance 2_
-3. Changed the 
++ Creating another EC2 instance
+    + Choose the **Launch more like this** action on the first instance created. 
+    + Renamed the copy to _University Lab Instance 2_
+    + Changed the availability zone to us-east-1b
++ Create an application load balancer
+    + Named it
+    + Selected us-east-1a and us-east-1b for availability zones
+    + Selected the _Web Server Security Group_
+    + In Listeners and routing panel: Created a new target group. This will allow me to select which instances that are available for traffic distribution.
+
+For every other option, I kept default.
+
+
+
+
 
