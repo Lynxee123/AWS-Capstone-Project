@@ -95,7 +95,14 @@ Final component in the infrastructure is auto scaling. This will allow new insta
 + Create Auto Scaling Group named _University Auto Scaling Group_
     +  Launched the previously made template
     +  Version: Latest
-    +  Selected __
+    +  Selected _ExampleUniversity-vpc_ for VPC
+    +  Selected Public Subnet 1
+    +  Create Auto Scaling group
+
+To check that I successfully implemented auto scaling, I navigated back to my EC2 instances and notice that a new instance has been started. 
+
+
+#Testing
 
 
 
