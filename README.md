@@ -3,19 +3,20 @@ This is documentation of building a highly available, scalable web application u
 
 
 # VPC
-First step, I needed to create a Virtual Private Cloud (VPC) to hold my infrastructure. To note, this infrastructure is placed in one region and uses two availability zones for fault tolerance. The web application instance also lies on two public subnets.
+First step, I needed to create a Virtual Private Cloud (VPC) to hold my infrastructure. To note, this infrastructure is placed in one region and uses two availability zones (us-east-1a & us-east-1b) for fault tolerance. The web application instance also lies on two public subnets (public subnet 1 & public subnet 2).
 
 The VPC that I created has private subnets, but they are not utilized for simplicity. Using private subnets and a NAT gateway would have been more secure for the web application, but it’s complex, takes up too much time, and is costly.
 
 After the VPC specifications were establishes, I had to create the VPC security group. I named it _Web Security Group_. Within _Inbound rules_, I allowed **HTTP from any IPv4** source which would permit web requests to the website. Using my own security group rather than the default security group allowed me to customize what protocols were allowed to communicate with the web application. 
 
-# EC2
-The next key part of the infrastructure was the computing power. I began by launching an EC2 instance labeled, _University Lab Instance_. I chose the **Ubuntu Amazon Machine Image** and chose the default **t2.micro** instance type and key pair. The university is small, so the free default options are suitable for the scenario. 
 
-**EC2 Settings**
+# EC2
+The next key part of the infrastructure was the computing power. I began by launching an EC2 instance labeled, _University Lab Instance 1_. I chose the **Ubuntu Amazon Machine Image** and chose the default **t2.micro** instance type and key pair. The university is small, so the free default options are suitable for the scenario. 
+
+**EC2 Settings:**
 + Networking Settings
     + Enabled Auto-assign public IP
-    + Selected Web Security Group for the EC2 security group
+    + Selected _Web Security Group_ for the EC2 security group
 + Advanced Details
     + Entered Example University's website script in the User data box:
 
@@ -56,4 +57,14 @@ export APP_PORT=80
 npm start' > /etc/rc.local
 chmod +x /etc/rc.local
 ```
+For the other options when making the EC2 Instance, I kept default. Once the instance is launched, to check that the website is publicly accessible, I copied the IP address into a web browser. I knew it was successful when the web page popped up without any errors.
+
+
+# Load Balancing
+Even though the university is small, I still want to make sure the website will be accessible in any chance of high volumes of incoming traffic. To do so, I created an application load balancer that will split traffic between instances in two different availability zones.
+
+**The steps I took to complete this:**
+1. Choose the **Launch more like this** action on the first instance created. 
+2. Renamed the copy to _University Lab Instance 2_
+3. Changed the 
 
