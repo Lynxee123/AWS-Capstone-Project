@@ -3,7 +3,7 @@ This is documentation of building a highly available, scalable web application u
 
 
 # VPC
-First step, I needed to create a Virtual Private Cloud (VPC) to hold my infrastructure. To note, this infrastructure is placed in one region and uses two availability zones (us-east-1a & us-east-1b) for fault tolerance. The web application instance also lies on two public subnets (public subnet 1 & public subnet 2).
+First step, I needed to create a Virtual Private Cloud (VPC) named _ExampleUniversity-vpc_ to hold my infrastructure. To note, this infrastructure is placed in one region and uses two availability zones (**us-east-1a** & **us-east-1b**) for fault tolerance. The web application instance also lies on two public subnets (public subnet 1 & public subnet 2).
 
 The VPC that I created has private subnets, but they are not utilized for simplicity. Using private subnets and a NAT gateway would have been more secure for the web application, but it’s complex, takes up too much time, and is costly.
 
@@ -69,12 +69,33 @@ Even though the university is small, I still want to make sure the website will 
     + Renamed the copy to _University Lab Instance 2_
     + Changed the availability zone to us-east-1b
 + Create an application load balancer
-    + Named it
+    + Named it _ExampleUniversityLB_
     + Selected us-east-1a and us-east-1b for availability zones
     + Selected the _Web Server Security Group_
-    + In Listeners and routing panel: Created a new target group. This will allow me to select which instances that are available for traffic distribution.
+    + In Listeners and routing panel: Created a new target group named _albTG_. This will allow me to select which instances that are available for traffic distribution.
 
 For every other option, I kept default.
+
+
+#Auto Scaling
+Final component in the infrastructure is auto scaling. This will allow new instances to be automatically created to accommodate any potential incoming traffic. 
+
+**The steps I took to complete this:**
++ Navigated to _Create launch template_
+    + Enabled Auto Scaling guidance
+    + AMI: Ubuntu
+    + Instance type: t2.micro
+    + Key pair name: vockey
+    + Subnet: Don't include in launch template
+    + Advanced network configuration:
+        + Enabled Auto-assign public IP
+        + Selected the _Web Server Security Group_
+        + Enabled Delete on termination
+    + Create launch template
++ Create Auto Scaling Group named _University Auto Scaling Group_
+    +  Launched the previously made template
+    +  Version: Latest
+    +  Selected __
 
 
 
