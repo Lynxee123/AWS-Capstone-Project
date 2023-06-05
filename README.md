@@ -59,6 +59,8 @@ chmod +x /etc/rc.local
 ```
 For the other options when making the EC2 Instance, I kept default. Once the instance is launched, to check that the website is publicly accessible, I copied the IP address into a web browser. I knew it was successful when the web page popped up without any errors.
 
+![XYZ image](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/77e90f7e-1395-4fed-bd23-9a5c98771cb4)
+
 
 # Load Balancing
 Even though the university is small, I still want to make sure the website will be accessible in any chance of high volumes of incoming traffic. To do so, I created an application load balancer that will split traffic between instances in two different availability zones.
@@ -97,13 +99,18 @@ Final component in the infrastructure is auto scaling. This will allow new insta
     +  Version: Latest
     +  Selected _ExampleUniversity-vpc_ for VPC
     +  Selected Public Subnet 1
+    +  Set the:
+        + Desired capacity to 1
+        + Min capacity to 0
+        + Max capacity to 4
     +  Create Auto Scaling group
+    +  Attach the instances into the auto scaling group (in the EC2 section under Actions)
 
 To check that I successfully implemented auto scaling, I navigated back to my EC2 instances and notice that a new instance has been started. 
 
 
 #Testing
-
+To make sure that the infrastructure I created was built correctly, I need to put the 
 
 
 
