@@ -1,2 +1,4 @@
 # AWS-Capstone-Project
-Building a Highly Available, Scalable Web Application
+This is documentation of building a highly available, scalable web application using AWS' cloud services for Example XYZ University.
+
+
