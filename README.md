@@ -3,9 +3,11 @@ This is documentation of building a highly available, scalable web application u
 
 # Preview
 ![Capstone Project_ Building a Highly Available, Scalable Web Application (1)](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/6dfefa12-416c-40c5-8036-d31cf8695af4)
-
+This is what the end result will look like after everything is put together.
 
 # Cost Estimation
+
+[My Estimate - AWS Pricing Calculator.pdf](https://github.com/Lynxee123/AWS-Capstone-Project/files/11668595/My.Estimate.-.AWS.Pricing.Calculator.pdf)
 
 
 # Creating a VPC
