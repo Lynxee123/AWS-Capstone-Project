@@ -1,6 +1,9 @@
 # AWS-Capstone-Project
 This is documentation of building a highly available, scalable web application using AWS' cloud services for Example XYZ University.
 
+# Preview
+![Capstone Project_ Building a Highly Available, Scalable Web Application (1)](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/6dfefa12-416c-40c5-8036-d31cf8695af4)
+
 
 # Cost Estimation
 
