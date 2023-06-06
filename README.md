@@ -137,8 +137,8 @@ The following command installs the loadtest package to perform load testing on t
 npm install -g loadtest
 ```
 This command simulates user load on the application.
-- replace with the load balancer DNS name
+- Replace with the load balancer DNS name
 ```
 loadtest --rps 2000 -c 1000 -k http://<LoadBalancerDNS>
 ```
-
+Once I ran this command, I had to wait about 10-15 mins until I saw results (primarily auto scaling) because the CPU utilization had to cross a certain point. As it ran the script, it also popped up warnings, but it was fine to ignore them. 
