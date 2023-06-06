@@ -2,6 +2,9 @@
 This is documentation of building a highly available, scalable web application using AWS' cloud services for Example XYZ University.
 
 
+# Cost Estimation
+
+
 # Creating a VPC
 First step, I needed to create a Virtual Private Cloud (VPC) named _ExampleUniversity-vpc_ to hold my infrastructure. To note, this infrastructure is placed in one region and uses two availability zones (**us-east-1a** & **us-east-1b**) for fault tolerance. The web application instance also lies on two public subnets (public subnet 1 & public subnet 2).
 
@@ -125,5 +128,17 @@ To do this, I needed to create an environment that is attached to the VPC and th
     + VPC: _____
     + Subnet: Public Subnet 1
  
- For the other options, I kept default. 
+For the other options, I kept default. 
+ 
+Once the AWS Cloud9 environment is created, I performed a load test on the application by running scripts in the AWS Cloud9 terminal:
+
+The following command installs the loadtest package to perform load testing on the application
+```
+npm install -g loadtest
+```
+This command simulates user load on the application.
+- replace with the load balancer DNS name
+```
+loadtest --rps 2000 -c 1000 -k http://<LoadBalancerDNS>
+```
 
