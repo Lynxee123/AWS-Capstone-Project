@@ -135,6 +135,9 @@ To do this, I needed to create an environment that is attached to the VPC and th
  
 For the other options, I kept default. 
  
+ ![cloud9environment](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/5d398a50-075c-4857-b8e3-1a567c9b29f7)
+
+ 
 Once the AWS Cloud9 environment is created, I performed a load test on the application by running scripts in the AWS Cloud9 terminal:
 
 The following command installs the loadtest package to perform load testing on the application
@@ -152,4 +155,5 @@ Once I ran this command, I had to wait about 10-15 mins until I saw results (pri
 
 To know that my infrastructure was built correctly, I navigated to the EC2 console and observed the amount of instances. I noticed that they increased in quantity. To observe the load balancing, I clicked on one of the instances and monitored the CPU utilization. All instances seemed to have the same amount of traffic, which means it did distribute the traffic between availability zones. 
 
+![cpuutil](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/8b93665b-d03c-414c-a523-afc2e7bcdbf2)
 
