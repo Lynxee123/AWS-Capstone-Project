@@ -3,9 +3,16 @@ This is documentation of building a highly available, scalable web application u
 
 # Preview
 ![Capstone Project_ Building a Highly Available, Scalable Web Application (1)](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/6dfefa12-416c-40c5-8036-d31cf8695af4)
-This is what the end result will look like after everything is put together.
+**This is what the end result will look like after everything is put together.**
 
 # Cost Estimation
+In this scenario, I have a $80 monthly budget. I'm building a really simple infrastructure that contains:
++ VPC
++ EC2
++ Load Balancing
++ Auto Scaling
+
+A lot AWS' services have a free tier, so I went under the budget. 
 
 [My Estimate - AWS Pricing Calculator.pdf](https://github.com/Lynxee123/AWS-Capstone-Project/files/11668595/My.Estimate.-.AWS.Pricing.Calculator.pdf)
 
