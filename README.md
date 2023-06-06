@@ -2,7 +2,8 @@
 This is documentation of building a highly available, scalable web application using AWS' cloud services for Example XYZ University.
 
 # Preview
-![Capstone Project_ Building a Highly Available, Scalable Web Application (1)](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/6dfefa12-416c-40c5-8036-d31cf8695af4)
+![Capstone Project_ Building a Highly Available, Scalable Web Application](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/61b539f7-5017-49d3-87f1-d6a8551810ea)
+
 **This is what the end result will look like after everything is put together.**
 
 # Cost Estimation
@@ -167,3 +168,4 @@ To know that my infrastructure was built correctly, I navigated to the EC2 conso
 
 ![cpuutil](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/8b93665b-d03c-414c-a523-afc2e7bcdbf2)
 
+![Capstone Project_ Building a Highly Available, Scalable Web Application (1)](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/6dfefa12-416c-40c5-8036-d31cf8695af4)
