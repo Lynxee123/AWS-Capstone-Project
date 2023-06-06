@@ -10,7 +10,12 @@ First step, I needed to create a Virtual Private Cloud (VPC) named _ExampleUnive
 
 The VPC that I created has private subnets, but they are not utilized for simplicity. Using private subnets and a NAT gateway would have been more secure for the web application, but it’s complex, takes up too much time, and is costly.
 
+![vpc](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/c78ab337-3078-4c2e-9d39-2c8e9d50ffdd)
+
 After the VPC specifications were establishes, I had to create the VPC security group. I named it _Web Security Group_. Within _Inbound rules_, I allowed **HTTP from any IPv4** source which would permit web requests to the website. Using my own security group rather than the default security group allowed me to customize what protocols were allowed to communicate with the web application. 
+
+![security group](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/bc0a61ba-feb8-48ac-9de5-6aea4c6e49ac)
+
 
 
 # Launching an EC2 Instance
@@ -141,6 +146,10 @@ This command simulates user load on the application.
 ```
 loadtest --rps 2000 -c 1000 -k http://<LoadBalancerDNS>
 ```
+![scriptrun](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/b37af176-ec3c-4076-81a1-1045fe6ca4e6)
+
 Once I ran this command, I had to wait about 10-15 mins until I saw results (primarily auto scaling) because the CPU utilization had to cross a certain point. As it ran the script, it also popped up warnings, but it was fine to ignore them. 
 
 To know that my infrastructure was built correctly, I navigated to the EC2 console and observed the amount of instances. I noticed that they increased in quantity. To observe the load balancing, I clicked on one of the instances and monitored the CPU utilization. All instances seemed to have the same amount of traffic, which means it did distribute the traffic between availability zones. 
+
+
