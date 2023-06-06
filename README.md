@@ -4,7 +4,7 @@ This is documentation of building a highly available, scalable web application u
 # Infrastructure Prediction
 ![Capstone Project_ Building a Highly Available, Scalable Web Application](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/61b539f7-5017-49d3-87f1-d6a8551810ea)
 
-I created this diagram before I actually started the build. This is the ideal infrastructure because it's secure. However, for a first time try, I learned throughout that it'll be easier make it more simple.
+I created this diagram before I actually started the build. This is the ideal infrastructure because it's secure. However, for a first time try, I learned throughout that it'll be easier to go simple.
 
 # Cost Estimation
 In this scenario, I have a $80 monthly budget. I'm building a really simple infrastructure that contains:
