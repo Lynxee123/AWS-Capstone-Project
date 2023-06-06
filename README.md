@@ -126,11 +126,11 @@ To do this, I needed to create an environment that is attached to the VPC and th
 
 **The steps I took to complete this:**
 + Navigated to AWS Management Console, chose Cloud9
-    + Created an environment named _____
+    + Created an environment named UniversityIDE
     + Environment type: New EC2 instance
     + Instance type: t2.micro
     + Connection: Secure Shell (SSH)
-    + VPC: _____
+    + VPC: ExampleUniversity-vpc
     + Subnet: Public Subnet 1
  
 For the other options, I kept default. 
