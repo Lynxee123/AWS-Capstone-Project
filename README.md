@@ -109,12 +109,7 @@ Final component in the infrastructure is auto scaling. This will allow new insta
 To check that I successfully implemented auto scaling, I navigated back to my EC2 instances and notice that a new instance has been started. 
 
 
-#Testing
+# Testing
 To make sure that the infrastructure I created was correctly built, I need to put the web application under heavy load to see if:
 1. EC2 instances distributes traffic between availability zones (i.e. load balancing works)
 2. New EC2 instances are created when a certain percentage in CPU utilization is crossed (i.e. auto scaling works)
-
-
-
-
-
