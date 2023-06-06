@@ -12,7 +12,7 @@ In this scenario, I have a $80 monthly budget. I'm building a really simple infr
 + Load Balancing
 + Auto Scaling
 
-A lot AWS' services have a free tier, so I went under the budget. Here is my estimated budget for entire build using AWS Pricing Calculator: [My Estimate - AWS Pricing Calculator.pdf](https://github.com/Lynxee123/AWS-Capstone-Project/files/11668595/My.Estimate.-.AWS.Pricing.Calculator.pdf)
+A lot AWS' services have a free tier, so I went under the budget. Here is my estimated budget for the entire build using AWS Pricing Calculator: [My Estimate - AWS Pricing Calculator.pdf](https://github.com/Lynxee123/AWS-Capstone-Project/files/11668595/My.Estimate.-.AWS.Pricing.Calculator.pdf)
 
 
 # Creating a VPC
