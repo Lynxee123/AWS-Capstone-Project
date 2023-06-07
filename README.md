@@ -1,5 +1,5 @@
 # AWS-Capstone-Project
-This is documentation of building a highly available, scalable web application using AWS' cloud services for Example XYZ University.
+This is documentation for building a highly available, scalable web application using AWS' cloud services for Example XYZ University.
 
 # Infrastructure Prediction
 ![Capstone Project_ Building a Highly Available, Scalable Web Application](https://github.com/Lynxee123/AWS-Capstone-Project/assets/117693278/61b539f7-5017-49d3-87f1-d6a8551810ea)
